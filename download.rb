@@ -4,6 +4,7 @@ require 'securerandom'
 require 'time'
 
 File.delete('report.sqlite3') if File.exist?('report.sqlite3')
+Dir.mkdir('download') unless File.exist?('download')
 
 db = SQLite3::Database.new 'report.sqlite3'
 
