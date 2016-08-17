@@ -34,7 +34,7 @@ MarketBot::Play::Chart::CATEGORIES.each do |category|
 				file_path = "./download/#{file_name}.apk"
 				result = `python2 -W ignore ./googleplay_api/download.py #{x[:package]} #{file_path}`
 				if /^Downloading \d+.\d+(KB|MB|GB)... Done\n$/.match(result).nil?
-					puts "Download #{x[:package]} failed..."
+					puts "failed"
 					next
 				end
 
